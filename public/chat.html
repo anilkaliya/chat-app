@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="chat">
+    <div class="chat__sidebar">
+      <h3>people</h3>
+      <h2 >
+
+      </h2>
+      <div id="users">
+
+      </div>
+
+    </div>
+    <div class="chat__main">
+      <ol id="messages" class="chat__messages">
+
+      </ol>
+      <div class="chat__footer">
+        <form id="message-form">
+          <input name ="message" type="text" placeholder="Enter your message"/ autofocus autocomplete="off">
+          <button >Send</button>
+
+        </form>
+          <button id="send-location"> send location</button>
+
+
+      </div>
+
+
+    </div>
+
+<script id="message-template" type="text/template">
+<li class="messages">
+<div class="message__title">
+  <h4>{{from}}</h4>
+  {{createdAt}}
+</div>
+<div class="message_body">
+{{text}}</div>
+</li>
+</script>
+<script id="location-message-template" type="text/template">
+<li class="messages">
+<div class="message__title">
+  <h4>{{from}}</h4>
+  {{createdAt}}
+</div>
+<div class="message_body">
+<a href="{{url}}" target="_blank"> My Current Loction</a></div>
+</li>
+</script>
+
+
+    <script src="js/jquery-3.3.1.min.js">
+
+    </script>
+    <script src="js/moment.js">  </script>
+        <script src="js/mustache.js">  </script>
+
+
+    <script src='socket.io/socket.io.js'>
+
+    </script >
+    <script src="/js/chat.js"></script>
+      <script src="/js/deparam.js">
+
+    </script>
+  </body>
+</html>
